@@ -2,7 +2,7 @@
 Android App Developpement Project @ Epita
 
 Zabat Akram
-
+x
 Leherle Maxime
-
+x
 Patel Shubhamkumar
