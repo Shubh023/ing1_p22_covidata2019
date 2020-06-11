@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Covidata 2019</string>
+    <string name="signature">Made@EPITA</string>
+    <string name="data">Data</string>
+    <string name="graph">Graph</string>
+    <string name="mystery">Mystery</string>
+    <string name="app_presentation">
+        Hi friend and welcome to this Application.
+         You can follow the evolution of the current
+         crisis in real time or find this information on
+         a specific date. I let you explore and good luck,
+         take care of yourself and your loved ones.
+    </string>
+</resources>
