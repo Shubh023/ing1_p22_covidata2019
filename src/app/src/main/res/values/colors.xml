@@ -6,4 +6,6 @@
     <color name="BtnColor">#CCC</color>
     <color name="Titles">#290094</color>
     <color name="SimpleText">#300088</color>
+    <color name="appBackground">#676171</color>
+
 </resources>

@@ -4,6 +4,13 @@
     <string name="data">Data</string>
     <string name="graph">Graph</string>
     <string name="mystery">Mystery</string>
+    <string name="totals">Totals</string>
+    <string name="world">World :</string>
+    <string name="confirmed">Confirmed :</string>
+    <string name="deaths">Deaths :</string>
+    <string name="recovered">Recovered :</string>
+    <string name="country">By Country :</string>
+
     <string name="app_presentation">
         Hi friend and welcome to this Application.
          You can follow the evolution of the current

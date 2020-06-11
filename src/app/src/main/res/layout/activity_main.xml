@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#676171"
+    android:background="@color/appBackground"
     tools:context=".MainActivity">
 
     <TextView
@@ -65,10 +65,12 @@
         android:id="@+id/mainGraphBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/backgroundbtn"
         android:text="@string/graph"
         android:textColor="@color/BtnColor"
         android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/logoEpita"
         app:layout_constraintEnd_toStartOf="@+id/mainMysteryBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"
