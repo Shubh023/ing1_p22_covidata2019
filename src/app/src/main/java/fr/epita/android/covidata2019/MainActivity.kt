@@ -14,5 +14,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, DataActivitiy::class.java),
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
+
+        mainGraphBtn.setOnClickListener {
+            startActivity(Intent(this, GraphActivity::class.java),
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
     }
 }
