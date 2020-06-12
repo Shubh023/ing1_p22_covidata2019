@@ -1,10 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/appBackground"
     tools:context=".CalendarActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/calendarconfirmedtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:paddingStart="4dp"
+        android:shadowColor="@color/BtnColor"
+        android:shadowDx="-10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="@string/confirmed"
+        android:textColor="@color/SimpleText"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/calendarCountry"
+        app:layout_constraintVertical_bias="0.19999999"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/calendardeathstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:shadowColor="@color/BtnColor"
+        android:shadowDx="-10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="@string/deaths"
+        android:textColor="@color/SimpleText"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/calendarconfirmedtxt"
+        app:layout_constraintTop_toBottomOf="@+id/calendarconfirmedtxt"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/calendarrecoveredtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:shadowColor="@color/BtnColor"
+        android:shadowDx="-10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="@string/recovered"
+        android:textColor="@color/SimpleText"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/calendardeathstxt"
+        app:layout_constraintTop_toBottomOf="@+id/calendardeathstxt"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/calendarRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:shadowColor="#000"
+        android:shadowDx="-10"
+        android:shadowDy="10"
+        android:shadowRadius="3"
+        android:textColor="@color/BtnColor"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/calendarDeaths"
+        tools:ignore="RtlSymmetry"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/calendarDeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:shadowColor="#000"
+        android:shadowDx="-10"
+        android:shadowDy="10"
+        android:shadowRadius="3"
+        android:textColor="@color/BtnColor"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/calendarConfirmed"
+        tools:ignore="RtlSymmetry"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/calendarConfirmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:shadowColor="#000"
+        android:shadowDx="-10"
+        android:shadowDy="10"
+        android:shadowRadius="3"
+        android:textColor="@color/BtnColor"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/calendarconfirmedtxt"
+        tools:ignore="RtlSymmetry"
+        tools:text="0" />
+
+    <CalendarView
+        android:id="@+id/calendarDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/backgroundcalendar"
+        android:dateTextAppearance="@style/TextCalendarView"
+        android:weekDayTextAppearance="@style/WeekCalendarView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/calendarCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:shadowColor="#333"
+        android:shadowDx="-10"
+        android:shadowDy="10"
+        android:shadowRadius="7"
+        android:textAllCaps="false"
+        android:textColor="@color/BtnColor"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/calendarDate"
+        app:layout_constraintTop_toBottomOf="@+id/calendarDate"
+        tools:text="Country Name" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

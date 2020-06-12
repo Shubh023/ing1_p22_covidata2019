@@ -7,4 +7,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextCalendarView" parent="android:TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/BtnColor</item>
+        <item name="android:weekNumberColor">@color/BtnColor</item>
+    </style>
+
+    <style name="WeekCalendarView" parent="android:TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
 </resources>

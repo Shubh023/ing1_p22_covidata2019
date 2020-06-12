@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Covidata 2019</string>
     <string name="signature">Made@EPITA</string>
+    <string name="student1">Application made by : Akram ZABAT</string>
+    <string name="student2">Maxime LEHERLE</string>
+    <string name="student3">Shubhamkumar PATEL</string>
+
+
+    <!-- Code data-->
     <string name="data">Data</string>
     <string name="graph">Graph</string>
     <string name="mystery">Mystery</string>
@@ -10,9 +16,16 @@
     <string name="deaths">Deaths :</string>
     <string name="recovered">Recovered :</string>
     <string name="country">By Country :</string>
-    <string name="student1">Application made by : Akram ZABAT</string>
-    <string name="student2">Maxime LEHERLE</string>
-    <string name="student3">Shubhamkumar PATEL</string>
+
+    <string name="confirmedBtn">Confirmed</string>
+    <string name="deathsBtn">Deaths</string>
+    <string name="recoveredBtn">Recovered</string>
+
+
+
+
+
+
 
     <string name="app_presentation">
         Hi friend and welcome to this Application.
