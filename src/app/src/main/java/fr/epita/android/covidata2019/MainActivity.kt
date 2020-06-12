@@ -19,5 +19,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, GraphActivity::class.java),
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
+
+        // pour tester en attendant
+        mainMysteryBtn.setOnClickListener {
+            startActivity(Intent(this, CalendarActivity::class.java),
+                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+        }
     }
 }
