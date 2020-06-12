@@ -40,6 +40,7 @@
         android:textColor="@color/BtnColor"
         android:textSize="32sp"
         android:textStyle="bold"
+        android:padding="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dataTotalsTxt" />
 
@@ -164,6 +165,7 @@
         android:textColor="@color/BtnColor"
         android:textSize="32sp"
         android:textStyle="bold"
+        android:padding="4dp"
         app:layout_constraintStart_toStartOf="@+id/dataWorldTxt"
         app:layout_constraintTop_toBottomOf="@+id/datarecoveredtxt" />
 
