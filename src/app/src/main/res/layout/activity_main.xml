@@ -117,15 +117,14 @@
 
     <ImageView
         android:id="@+id/mainCoronaImg"
-        app:layout_constraintCircleRadius="100dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
         android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toTopOf="@+id/mainDataBtn"
+        app:layout_constraintBottom_toTopOf="@+id/student1"
+        app:layout_constraintCircleRadius="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,6 +144,37 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:id="@+id/student1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/student1"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/student2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/student2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/student2"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/student3"
+        app:layout_constraintEnd_toEndOf="@+id/student1"
+        app:layout_constraintStart_toStartOf="@+id/student1" />
+
+    <TextView
+        android:id="@+id/student3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/student3"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/mainDataBtn"
+        app:layout_constraintEnd_toEndOf="@+id/student2"
+        app:layout_constraintStart_toStartOf="@+id/student2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
