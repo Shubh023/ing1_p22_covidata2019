@@ -67,10 +67,8 @@ class GraphActivity : AppCompatActivity() {
         {
             bars.add(Bar("Failure", 0))
         }
-        barRecycler.adapter = BarAdapter(bars)
 
         var baseURL = "https://api.covid19api.com/"
-        //val baseURL = "https://jsonplaceholder.typicode.com/"
 
         var jsonConverter = GsonConverterFactory.create(GsonBuilder().create())
 
@@ -81,53 +79,15 @@ class GraphActivity : AppCompatActivity() {
 
         var service: WSInterface = retrofit.create(WSInterface::class.java)
 
-        fun convertToBars(covidlist : List<CovidData>?): ArrayList<Bar> {
-            var list = ArrayList<CovidData>()
-            var barlist = ArrayList<Bar>()
-            var datelist = ArrayList<String>()
-            var casesList = ArrayList<Int>()
-            if (covidlist != null) {
-                for (i in covidlist) {
-                    list.add(i)
-                }
-            }
-
-            if (list != null) {
-                for (i in list) {
-                    var list2 = list
-                    var date = i.Date
-                    list2 = list2.filter { it.Date.startsWith(it.Date.subSequence(0,10)) == i.Date.startsWith(i.Date.subSequence(0,10)) } as ArrayList<CovidData>
-                    var CasesCounter = 0
-                    for (j in list2) {
-                        CasesCounter += j.Cases
-                    }
-                    if (!datelist.contains(i.Date))
-                    {
-                        datelist.add(i.Date.subSequence(0,10).toString())
-                        casesList.add(CasesCounter)
-                    }
-
-                }
-            }
-            for (d in datelist.indices)
-            {
-                barlist.add(Bar(datelist.elementAt(d),casesList.elementAt(d)))
-            }
-
-            return barlist
-        }
-
         fun convertCovidDataToBars(covidlist : List<CovidData>?): ArrayList<Bar> {
             var list = ArrayList<Bar>()
-            var barlist = ArrayList<Pair<String,Int>>()
             if (covidlist != null) {
-                for (c in covidlist) {
-                    barlist.add(Pair<String, Int>(c.Date.subSequence(0,10).toString(), c.Cases))
+                var groupby = covidlist.groupBy { it.Date.subSequence(0,10).toString() }
+                for (e in groupby)
+                {
+                    var sum = e.value.sumBy { it.Cases }
+                    list.add(Bar(e.key,sum));
                 }
-            }
-            for (b in barlist)
-            {
-                list.add(Bar(b.first,b.second))
             }
             return list
         }
@@ -145,27 +105,13 @@ class GraphActivity : AppCompatActivity() {
                         barRecycler.adapter = BarAdapter(barlist)
                     }
                 }
-
             override fun onFailure(call: Call<List<CovidData>>, t: Throwable) {
                 barRecycler.adapter = BarAdapter(bars)
                 Log.w("TAG", "WebService call failed")
             }
         }
 
-        var wsTodoCallBack: Callback<List<ToDoObject>> = object : Callback<List<ToDoObject>> {
-            override fun onFailure(call: Call<List<ToDoObject>>, t: Throwable) {
-                Log.w("TAG", "WebService call failed")
-                throw t
-            }
-
-            override fun onResponse(
-                call: Call<List<ToDoObject>>,
-                response: Response<List<ToDoObject>>
-            ) {
-                Log.w("TAG", "WebService Succeded")
-            }
-        }
-
+        service.getConfirmedList().enqueue(wsCallBack)
         graphConfirmedBtn.setOnClickListener {
             service.getConfirmedList().enqueue(wsCallBack)
         }
@@ -176,7 +122,5 @@ class GraphActivity : AppCompatActivity() {
         graphRecoveredBtn.setOnClickListener {
             service.getRecoveredList().enqueue(wsCallBack)
         }
-
     }
-
 }
