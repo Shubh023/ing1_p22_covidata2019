@@ -32,30 +32,6 @@ class GraphActivity : AppCompatActivity() {
         graphConfirmedBtn.setBackgroundResource(R.drawable.backgroundbtn_selected)
 
 
-
-        graphConfirmedBtn.setOnClickListener {
-            selectedData = "Confirmed"
-            it.setBackgroundResource(R.drawable.backgroundbtn_selected)
-            graphDeathsBtn.setBackgroundResource(R.drawable.backgroundlist)
-            graphRecoveredBtn.setBackgroundResource(R.drawable.backgroundlist)
-
-        }
-
-        graphDeathsBtn.setOnClickListener {
-            selectedData = "Deaths"
-            it.setBackgroundResource(R.drawable.backgroundbtn_selected)
-            graphConfirmedBtn.setBackgroundResource(R.drawable.backgroundlist)
-            graphRecoveredBtn.setBackgroundResource(R.drawable.backgroundlist)
-        }
-
-        graphRecoveredBtn.setOnClickListener {
-            selectedData = "Recovered"
-            it.setBackgroundResource(R.drawable.backgroundbtn_selected)
-            graphConfirmedBtn.setBackgroundResource(R.drawable.backgroundlist)
-            graphDeathsBtn.setBackgroundResource(R.drawable.backgroundlist)
-        }
-
-
         val barRecycler = findViewById<RecyclerView>(R.id.BarRecyclerView)
 
         barRecycler.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
@@ -167,14 +143,23 @@ class GraphActivity : AppCompatActivity() {
         }
 
         graphConfirmedBtn.setOnClickListener {
+            it.setBackgroundResource(R.drawable.backgroundbtn_selected)
+            graphDeathsBtn.setBackgroundResource(R.drawable.backgroundlist)
+            graphRecoveredBtn.setBackgroundResource(R.drawable.backgroundlist)
             service.getConfirmedList().enqueue(wsCallBack)
         }
 
         graphDeathsBtn.setOnClickListener {
+            it.setBackgroundResource(R.drawable.backgroundbtn_selected)
+            graphConfirmedBtn.setBackgroundResource(R.drawable.backgroundlist)
+            graphRecoveredBtn.setBackgroundResource(R.drawable.backgroundlist)
             service.getDeathsList().enqueue(wsCallBack)
         }
         graphRecoveredBtn.setOnClickListener {
             service.getRecoveredList().enqueue(wsCallBack)
+            it.setBackgroundResource(R.drawable.backgroundbtn_selected)
+            graphConfirmedBtn.setBackgroundResource(R.drawable.backgroundlist)
+            graphDeathsBtn.setBackgroundResource(R.drawable.backgroundlist)
         }
 
     }
