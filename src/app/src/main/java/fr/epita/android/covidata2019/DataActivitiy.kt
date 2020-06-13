@@ -14,7 +14,7 @@ class DataActivitiy : AppCompatActivity() {
         setContentView(R.layout.activity_data)
 
         dataConfirmedWorld.text = "0"
-        dataDeathsWorld.text = "10"
+        dataDeathsWorld.text = "0"
         dataRecoveredWorld.text = "0"
 
     }
