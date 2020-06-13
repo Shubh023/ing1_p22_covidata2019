@@ -34,4 +34,6 @@
          a specific date. I let you explore and good luck,
          take care of yourself and your loved ones.
     </string>
+    <string name="date_text">Monday 5 April</string>
+    <string name="cases_text">600</string>
 </resources>
