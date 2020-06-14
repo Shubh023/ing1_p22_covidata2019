@@ -43,9 +43,9 @@ Ce graphe présente l'ensemble des activités et des Listeners à implémenter e
 
 ## MAIN ACTIVITY
 
-- [ ] LAYOUT
-- [ ] On DataBtn Click Listener
-- [ ] On GraphBtn Click Listener
+- [x] LAYOUT
+- [x] On DataBtn Click Listener
+- [x] On GraphBtn Click Listener
 - [ ] On MisteryBtn Click Listener
 - [ ] ***BONUS :*** on LogoBtn Listener
 
@@ -53,7 +53,7 @@ Ce graphe présente l'ensemble des activités et des Listeners à implémenter e
 
 ## DATA ACTIVITY
 
-- [ ] Layout
+- [x] Layout
 - [ ] Recycler View Layout
 - [ ] Recycler View Optimization
 - [ ] On Click Listener for List Element (Country name sent to Calendar Activity)
@@ -63,22 +63,22 @@ Ce graphe présente l'ensemble des activités et des Listeners à implémenter e
 
 ## GRAPH ACTIVITY
 
-- [ ] Layout
-- [ ] Recycler View Layout
-- [ ] Recycler View Optimization
-- [ ] Listener for each element which actualize graph data
-- [ ] Graph which present data per day of in terms of : 
-  - [ ] Confirmed Btn
-  - [ ] DeathsBtn
-  - [ ] RecoveryBtn
-- [ ] RETROFIT INTERFACE AND DATACLASSES
+- [x] Layout
+- [x] Recycler View Layout
+- [x] Recycler View Optimization
+- [x] Listener for each element which actualize graph data
+- [x] Graph which present data per day of in terms of : 
+  - [x] Confirmed Btn
+  - [x] DeathsBtn
+  - [x] RecoveryBtn
+- [x] RETROFIT INTERFACE AND DATACLASSES
 
 
 
 ## CALENDAR ACTIVITY
 
-- [ ] LAYOUT
-- [ ] Calendar View
+- [x] LAYOUT
+- [x] Calendar View
 - [ ] On Date Changed Listener
 - [ ] RETROFIT INTERFACE AND DATACLASSES
 
