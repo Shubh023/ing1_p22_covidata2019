@@ -1,19 +1,22 @@
 package fr.epita.android.covidata2019.services
 
-import fr.epita.android.covidata2019.CovidData
+import fr.epita.android.covidata2019.models.CovidData
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 
-// from /country/$CountryName/
 interface WSInterface {
 
-    @GET("status/confirmed")
-    fun getConfirmedList() : Call<List<CovidData>>
+    @GET("country/{countryName}/status/confirmed")
+    fun getConfirmedList(@Path(value="countryName", encoded=true) countryName : String) : Call<List<CovidData>>
 
-    @GET("status/recovered")
-    fun getRecoveredList() : Call<List<CovidData>>
+    @GET("country/{countryName}/status/recovered")
+    fun getRecoveredList(@Path(value="countryName", encoded=true) countryName : String) : Call<List<CovidData>>
 
-    @GET("status/deaths")
-    fun getDeathsList() : Call<List<CovidData>>
+    @GET("country/{countryName}/status/deaths")
+    fun getDeathsList(@Path(value="countryName", encoded=true) countryName : String) : Call<List<CovidData>>
+
+    @GET("countries")
+    fun getCountriesList() : Call<List<CovidData>>
 }
