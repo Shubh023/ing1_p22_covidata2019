@@ -1,13 +1,13 @@
-package fr.epita.android.covidata2019
+package fr.epita.android.covidata2019.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.math.max
+import fr.epita.android.covidata2019.R
+import fr.epita.android.covidata2019.models.Bar
 
 class BarAdapter(val dataList : ArrayList<Bar>) : RecyclerView.Adapter<BarAdapter.ViewHolder>() {
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView)
