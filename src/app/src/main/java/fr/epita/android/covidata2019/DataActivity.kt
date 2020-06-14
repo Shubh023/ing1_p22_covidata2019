@@ -29,10 +29,6 @@ class DataActivity : AppCompatActivity(), CountryAdapter.OnCountryListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data)
 
-        dataConfirmedWorld.text = "0"
-        dataDeathsWorld.text = "0"
-        dataRecoveredWorld.text = "0"
-
         dataCountryList.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 
         // Retrofit WS instantiation
@@ -48,6 +44,9 @@ class DataActivity : AppCompatActivity(), CountryAdapter.OnCountryListener {
         // World Stats
         val WorldCallBack : Callback<WorldData> = object : Callback<WorldData> {
             override fun onFailure(call: Call<WorldData>, t: Throwable) {
+                dataConfirmedWorld.text = "0"
+                dataDeathsWorld.text = "0"
+                dataRecoveredWorld.text = "0"
                 Log.w("WORLD CALL BACK", "Web service failed")
             }
 
