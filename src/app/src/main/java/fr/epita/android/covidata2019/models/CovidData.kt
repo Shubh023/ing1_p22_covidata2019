@@ -1,4 +1,4 @@
-package fr.epita.android.covidata2019
+package fr.epita.android.covidata2019.models
 
 /*
     "Country": "France",
