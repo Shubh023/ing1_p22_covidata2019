@@ -5,11 +5,13 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_calendar.*
 
 
+@Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class CalendarActivity : AppCompatActivity() {
     var country : String = "FRANCE"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
+        country = intent.getStringExtra("Country").toString()
         calendarConfirmed.text = "0"
         calendarDeaths.text = "0"
         calendarRecovered.text = "0"

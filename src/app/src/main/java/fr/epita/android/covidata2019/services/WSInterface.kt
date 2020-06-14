@@ -1,6 +1,7 @@
 package fr.epita.android.covidata2019.services
 
 import fr.epita.android.covidata2019.models.CovidData
+import fr.epita.android.covidata2019.models.WorldData
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -19,4 +20,8 @@ interface WSInterface {
 
     @GET("countries")
     fun getCountriesList() : Call<List<CovidData>>
+
+    @GET("world/total")
+    fun getWorldData() : Call<WorldData>
+
 }

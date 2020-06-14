@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mainDataBtn.setOnClickListener {
-            startActivity(Intent(this, DataActivitiy::class.java),
+            startActivity(Intent(this, DataActivity::class.java),
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
 
@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         // pour tester en attendant
         mainMysteryBtn.setOnClickListener {
-            startActivity(Intent(this, CalendarActivity::class.java),
+            startActivity(Intent(this, CalendarActivity::class.java)
+                .putExtra("Country", "France"),
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
     }

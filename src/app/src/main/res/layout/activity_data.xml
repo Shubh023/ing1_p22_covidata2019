@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appBackground"
-    tools:context=".DataActivitiy">
+    tools:context=".DataActivity">
 
     <TextView
         android:id="@+id/dataTotalsTxt"
@@ -67,7 +67,6 @@
         android:id="@+id/datadeathstxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:paddingStart="4dp"
         android:shadowColor="@color/BtnColor"
         android:shadowDx="-10"
@@ -85,7 +84,6 @@
         android:id="@+id/datarecoveredtxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:paddingStart="4dp"
         android:shadowColor="@color/BtnColor"
         android:shadowDx="-10"
@@ -105,8 +103,8 @@
         android:layout_height="wrap_content"
         android:paddingStart="4dp"
         android:shadowColor="#000"
-        android:shadowDx="-10"
-        android:shadowDy="10"
+        android:shadowDx="-5"
+        android:shadowDy="0"
         android:shadowRadius="3"
         android:layout_marginStart="32dp"
         android:textColor="@color/BtnColor"
@@ -123,16 +121,16 @@
         android:layout_height="wrap_content"
         android:paddingStart="4dp"
         android:shadowColor="#000"
-        android:shadowDx="-10"
-        android:shadowDy="10"
+        android:shadowDx="-5"
+        android:shadowDy="0"
         android:shadowRadius="3"
         android:textColor="@color/BtnColor"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="@+id/dataConfirmedWorld"
+        app:layout_constraintEnd_toEndOf="@+id/dataConfirmedWorld"
         app:layout_constraintTop_toTopOf="@+id/datadeathstxt"
-        tools:text="0"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry"
+        tools:text="0" />
 
     <TextView
         android:id="@+id/dataRecoveredWorld"
@@ -140,16 +138,16 @@
         android:layout_height="wrap_content"
         android:paddingStart="4dp"
         android:shadowColor="#000"
-        android:shadowDx="-10"
-        android:shadowDy="10"
+        android:shadowDx="-5"
+        android:shadowDy="0"
         android:shadowRadius="3"
         android:textColor="@color/BtnColor"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="@+id/dataDeathsWorld"
+        app:layout_constraintEnd_toEndOf="@+id/dataConfirmedWorld"
         app:layout_constraintTop_toTopOf="@+id/datarecoveredtxt"
-        tools:text="0"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry"
+        tools:text="0" />
 
     <TextView
         android:id="@+id/dataCountryTxt"
@@ -177,14 +175,11 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerView"
-        android:layout_width="0dp"
+        android:id="@+id/dataCountryList"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/dataCountryTxt" />
 

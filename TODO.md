@@ -54,10 +54,10 @@ Ce graphe présente l'ensemble des activités et des Listeners à implémenter e
 ## DATA ACTIVITY
 
 - [x] Layout
-- [ ] Recycler View Layout
-- [ ] Recycler View Optimization
-- [ ] On Click Listener for List Element (Country name sent to Calendar Activity)
-- [ ] RETROFIT INTERFACE AND DATACLASSES
+- [x] Recycler View Layout
+- [x] Recycler View Optimization
+- [x] On Click Listener for List Element (Country name sent to Calendar Activity)
+- [x] RETROFIT INTERFACE AND DATACLASSES
 
 
 
