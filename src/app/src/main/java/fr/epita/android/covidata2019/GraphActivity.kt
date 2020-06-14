@@ -23,8 +23,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class GraphActivity : AppCompatActivity() {
 
-    var selectedData : String = "Confirmed"
-    var selectedCountry : String = "France"
+    var defaultData : String = "Confirmed"
+    var defaultCountry : String = "France"
     @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +44,7 @@ class GraphActivity : AppCompatActivity() {
             bars.add(Bar("Failure", 0))
         }
 
-        var baseURL = "https://api.covid19api.com/"
+        var baseURL = "https://api.covid19api.com/country/$defaultCountry"
 
         var jsonConverter = GsonConverterFactory.create(GsonBuilder().create())
 

@@ -4,17 +4,16 @@ import fr.epita.android.covidata2019.CovidData
 import retrofit2.Call
 import retrofit2.http.GET
 
+
+// from /country/$CountryName/
 interface WSInterface {
 
-    @GET("todos")
-    fun getTodoList() : Call<List<ToDoObject>>
-
-    @GET("country/france/status/confirmed")
+    @GET("status/confirmed")
     fun getConfirmedList() : Call<List<CovidData>>
 
-    @GET("country/france/status/recovered")
+    @GET("status/recovered")
     fun getRecoveredList() : Call<List<CovidData>>
 
-    @GET("country/france/status/deaths")
+    @GET("status/deaths")
     fun getDeathsList() : Call<List<CovidData>>
 }
