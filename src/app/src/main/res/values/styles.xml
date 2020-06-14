@@ -10,6 +10,8 @@
     <style name="TextCalendarView" parent="android:TextAppearance.DeviceDefault">
         <item name="android:textColor">@color/BtnColor</item>
         <item name="android:weekNumberColor">@color/BtnColor</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
     </style>
 
     <style name="WeekCalendarView" parent="android:TextAppearance.DeviceDefault">
