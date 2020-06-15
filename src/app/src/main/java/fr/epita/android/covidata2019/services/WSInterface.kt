@@ -1,10 +1,12 @@
 package fr.epita.android.covidata2019.services
 
+import fr.epita.android.covidata2019.models.CountryCalendar
 import fr.epita.android.covidata2019.models.CovidData
 import fr.epita.android.covidata2019.models.WorldData
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 
 interface WSInterface {
@@ -24,4 +26,8 @@ interface WSInterface {
     @GET("world/total")
     fun getWorldData() : Call<WorldData>
 
+    @GET("country/{countryName}")
+    fun getCountryDate(@Path(value="countryName", encoded=true) countryName : String,
+                       @Query("from") fromDate : String,
+                       @Query("to") toDate : String) : Call<List<CountryCalendar>>
 }
