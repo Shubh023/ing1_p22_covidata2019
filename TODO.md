@@ -78,8 +78,8 @@ Ce graphe présente l'ensemble des activités et des Listeners à implémenter e
 
 - [x] LAYOUT
 - [x] Calendar View
-- [ ] On Date Changed Listener
-- [ ] RETROFIT INTERFACE AND DATACLASSES
+- [x] On Date Changed Listener
+- [x] RETROFIT INTERFACE AND DATACLASSES
 
 
 
