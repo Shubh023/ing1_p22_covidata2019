@@ -62,7 +62,7 @@ class MysteryActivity : AppCompatActivity() {
 
             @SuppressLint("SetTextI18n")
             override fun onTick(millisUntilFinished: Long) {
-                TimerText.text = "Time: " + round(millisUntilFinished.div(1000F)).toString()
+                TimerText.text = "Time: " + (millisUntilFinished / 1000).toString()
                 for (image in ImageArray) {
                     image.visibility = View.INVISIBLE
                 }
