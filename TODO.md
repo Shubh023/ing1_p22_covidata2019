@@ -45,7 +45,7 @@ Ce graphe présente l'ensemble des activités et des Listeners à implémenter e
 - [x] LAYOUT
 - [x] On DataBtn Click Listener
 - [x] On GraphBtn Click Listener
-- [ ] On MisteryBtn Click Listener
+- [x] On MisteryBtn Click Listener
 - [ ] ***BONUS :*** on LogoBtn Listener
 
 
@@ -87,10 +87,12 @@ Ce graphe présente l'ensemble des activités et des Listeners à implémenter e
 
 Ideas :
 
-- Maybe pie graph and calendar gathered on the same activity
-  - The graph shows confirmed cases, deaths and Recoveries in the same piegraph per day
+- [x] LAYOUT
 
-
+- [x] GAME
+- [x] Listeners
+- [x] PLAY AGAIN System
+- [x] MaxScore System
 
 
 
