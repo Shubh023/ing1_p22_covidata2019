@@ -1,5 +1,6 @@
 package fr.epita.android.covidata2019.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,6 +27,7 @@ class BarAdapter(val dataList : ArrayList<Bar>) : RecyclerView.Adapter<BarAdapte
         return dataList.size;
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val bar : Bar = dataList[position]
         var maxVal = 0
@@ -36,60 +38,6 @@ class BarAdapter(val dataList : ArrayList<Bar>) : RecyclerView.Adapter<BarAdapte
             }
         }
 
-        var month = ""
-
-        /*
-        var day = bar.date.subSequence(8,9).toString()
-        var year = bar.date.subSequence(0,3).toString()
-        if (bar.date.subSequence(4,6) == "01")
-        {
-            month = "January"
-        }
-        else if (bar.date.subSequence(5,6) == "02")
-        {
-            month = "February"
-        }
-        else if (bar.date.subSequence(5,6) == "03")
-        {
-            month = "March"
-        }
-        else if (bar.date.subSequence(5,6) == "04")
-        {
-            month = "April"
-        }
-        else if (bar.date.subSequence(5,6) == "05")
-        {
-            month = "May"
-        }
-        else if (bar.date.subSequence(5,6) == "06")
-        {
-            month = "June"
-        }
-        else if (bar.date.subSequence(5,6) == "07")
-        {
-            month = "July"
-        }
-        else if (bar.date.subSequence(5,6) == "08")
-        {
-            month = "August"
-        }
-        else if (bar.date.subSequence(5,6) == "09")
-        {
-            month = "September"
-        }
-        else if (bar.date.subSequence(5,6) == "10")
-        {
-            month = "October"
-        }
-        else if (bar.date.subSequence(5,6) == "11")
-        {
-            month = "November"
-        }
-        else if (bar.date.subSequence(5,6) == "12")
-        {
-            month = "December"
-        }
-        */
         holder.textViewName.text = bar.date
         holder.textViewCases.text = "Cases : "  + bar.size.toString()
         if (maxVal != 0)

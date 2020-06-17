@@ -75,8 +75,8 @@ class CalendarActivity : AppCompatActivity() {
 
         }
 
-        calendarDate.setOnDateChangeListener { view, year, month, dayOfMonth ->
-            val dayOfMonthString = if(dayOfMonth < 10) "0$dayOfMonth" else dayOfMonth
+        calendarDate.setOnDateChangeListener { _, year, month, dayOfMonth ->
+            val dayOfMonthString : String = if(dayOfMonth < 10) "0$dayOfMonth" else "$dayOfMonth"
 
             from = if(month+1 >= 10) "$year-${month+1}-${dayOfMonthString}T00:00:00Z"
                        else "$year-0${month+1}-${dayOfMonthString}T00:00:00Z"

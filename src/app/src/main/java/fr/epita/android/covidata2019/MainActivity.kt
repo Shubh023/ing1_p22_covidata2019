@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import fr.epita.android.covidata2019.mystery.MysteryActivity
 import kotlinx.android.synthetic.main.activity_main.*;
 
 class MainActivity : AppCompatActivity() {
@@ -13,19 +14,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mainDataBtn.setOnClickListener {
-            startActivity(Intent(this, DataActivity::class.java),
+            startActivity(Intent(MainActivity@this, DataActivity::class.java),
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
 
         mainGraphBtn.setOnClickListener {
-            startActivity(Intent(this, GraphActivity::class.java),
+            startActivity(Intent(MainActivity@this, GraphActivity::class.java),
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
 
         // pour tester en attendant
         mainMysteryBtn.setOnClickListener {
-            startActivity(Intent(this, CalendarActivity::class.java)
-                .putExtra("Country", "France"),
+            startActivity(Intent(MainActivity@this, MysteryActivity::class.java),
                 ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
 
