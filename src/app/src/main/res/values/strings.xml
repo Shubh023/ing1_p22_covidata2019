@@ -9,7 +9,7 @@
     <!-- Code data-->
     <string name="data">Data</string>
     <string name="graph">Graph</string>
-    <string name="mystery">Mystery</string>
+    <string name="mystery">Play Game</string>
     <string name="totals">Totals</string>
     <string name="world">World :</string>
     <string name="confirmed">Confirmed :</string>
@@ -23,17 +23,21 @@
 
 
 
-
-
-
-
     <string name="app_presentation">
-        Hi friend and welcome to this Application.
-         You can follow the evolution of the current
-         crisis in real time or find this information on
-         a specific date. I let you explore and good luck,
-         take care of yourself and your loved ones.
+        Hi friend and welcome into this App.
+        You can follow the evolution of the current
+        crisis in real time or find this information on
+        a specific date. We let you explore and good luck,
+        take care of yourself and your loved ones.
+        We also made a little game in order to help you to change
+        your mind, we hope you will appreciate ! :)
     </string>
     <string name="date_text">Monday 5 April</string>
     <string name="cases_text">600</string>
+
+    <string name="time_15">Time : 15</string>
+    <string name="score_0">Score : 0</string>
+    <string name="maxscore">max score : 0</string>
+
+    <string name="game_title">/!\\ Catch and kill the Virus /!\\</string>
 </resources>
