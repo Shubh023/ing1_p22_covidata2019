@@ -33,13 +33,11 @@ class MainActivity : AppCompatActivity() {
         logoEpita.setOnClickListener {
             easterEggCounter--;
             if (easterEggCounter == 0)
-                Toast.makeText(this, "Well Done ! Welcome", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Well Done ! Now we need a good mark please !", Toast.LENGTH_LONG).show()
             else if (easterEggCounter < 4)
                 Toast.makeText(this, "Remaining ${easterEggCounter.toString()} clicks", Toast.LENGTH_SHORT).show()
             if (easterEggCounter <= 0)
             {
-                // to change to misteryActivity
-                startActivity(Intent(this, DataActivity::class.java))
                 easterEggCounter = 6
             }
         }
