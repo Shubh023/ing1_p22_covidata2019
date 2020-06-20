@@ -11,6 +11,7 @@ import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import androidx.core.view.isVisible
 import fr.epita.android.covidata2019.R
 import kotlinx.android.synthetic.main.activity_mystery.*
 import java.lang.Runnable
@@ -50,8 +51,9 @@ class MysteryActivity : AppCompatActivity() {
             override fun onFinish() {
                 TimerText.text = "Time's Off"
                 for (image in ImageArray) {
-                    image.visibility = View.INVISIBLE
+                    image.visibility = ImageView.INVISIBLE
                 }
+                Thread.sleep(500)
                 if (score > maxScore) {
                     maxScore = score
                     gameMaxScore.text =  "max score : $maxScore"
@@ -66,7 +68,6 @@ class MysteryActivity : AppCompatActivity() {
                 for (image in ImageArray) {
                     image.visibility = View.INVISIBLE
                 }
-
                 val index = random.nextInt(8 - 0)
                 ImageArray[index].visibility = View.VISIBLE
             }
@@ -84,7 +85,7 @@ class MysteryActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     fun IncreaseScore(view: View) {
-        score++
+        ++score
         ScoreText.text = "Score: $score"
 
     }
